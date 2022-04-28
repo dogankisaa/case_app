@@ -5,8 +5,14 @@ import 'package:flutter_case/widgets/text_widget.dart';
 import '../screenInputs/play_screen_inputs.dart';
 
 class PostWidget extends StatelessWidget {
+  final image;
+  final title;
+  final detail;
   const PostWidget({
     Key? key,
+    this.image,
+    this.title,
+    this.detail,
   }) : super(key: key);
 
   @override
@@ -17,21 +23,26 @@ class PostWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            height: 80,
-            width: 80,
-            decoration: BoxDecoration(
-                color: Colors.grey,
-                borderRadius: BorderRadius.circular(8)),
-          ),
+              height: 80,
+              width: 80,
+            
+              child: Center(
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(imageRadius),
+                      child: Image.network(
+                        image,
+                        fit: BoxFit.cover,
+                      )))),
           SizedBox(
             width: 10,
           ),
-          Flexible(
+          Expanded(
+            flex: 1,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 TextWidget(
-                  text: "Did Opensea make a huge mistake?",
+                  text: title,
                   color: Theme.of(context).hintColor,
                   size: textSizeMedium,
                 ),
@@ -39,20 +50,24 @@ class PostWidget extends StatelessWidget {
                   height: 5,
                 ),
                 TextWidget(
-                  text: "Joe Mama Podcast",
+                  text: detail,
                   color: detailTextColor,
                   size: textSizeSmall,
                 ),
               ],
             ),
           ),
-          SizedBox(
+         Row(
+           children: [
+              SizedBox(
             height: 36,
             width: 36,
             child: SvgWidget(
               text: postDownloadIconText,
             ),
           ),
+           ],
+         )
         ],
       ),
     );

@@ -65,3 +65,5 @@ String bottomNavigationProfileIconText = "assets/navigator_profile_icon.svg";
 Color bottomNavigationUnSelectedColor = Colors.grey;
 
 String postDownloadIconText = "assets/post_download_icon.svg";
+
+String dioServiceLink = "https://rickandmortyapi.com/api/character/75";
