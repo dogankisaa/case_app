@@ -56,6 +56,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                       children: [
                         Column(
                           children: [
+                            //ana resim
                             Container(
                               decoration: BoxDecoration(
                                   borderRadius:
@@ -64,13 +65,15 @@ class _PlayerScreenState extends State<PlayerScreen> {
                               height: imageSize,
                               child: Center(
                                 child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(imageRadius),
+                                    borderRadius:
+                                        BorderRadius.circular(imageRadius),
                                     child: Image.network(
-                                  snapshot.data.image,
-                                  fit: BoxFit.cover,
-                                )),
+                                      snapshot.data.image,
+                                      fit: BoxFit.cover,
+                                    )),
                               ),
                             ),
+
                             SizedBox(
                               height: 8,
                             ),
@@ -145,6 +148,8 @@ class _PlayerScreenState extends State<PlayerScreen> {
                     SizedBox(
                       height: 16,
                     ),
+
+                    //play button
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -199,6 +204,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                     Column(
                       children: List.generate(4, (index) {
                         return PostWidget(
+                          //çoklu veri durumunda snapshot.data[index].image yaparak indexe göre gönderim yapabiliriz.
                           image: snapshot.data.image,
                           title: snapshot.data.name,
                           detail: snapshot.data.status,

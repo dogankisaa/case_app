@@ -25,7 +25,6 @@ class PostWidget extends StatelessWidget {
           Container(
               height: 80,
               width: 80,
-            
               child: Center(
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(imageRadius),
@@ -57,17 +56,17 @@ class PostWidget extends StatelessWidget {
               ],
             ),
           ),
-         Row(
-           children: [
+          Row(
+            children: [
               SizedBox(
-            height: 36,
-            width: 36,
-            child: SvgWidget(
-              text: postDownloadIconText,
-            ),
-          ),
-           ],
-         )
+                height: 36,
+                width: 36,
+                child: SvgWidget(
+                  text: postDownloadIconText,
+                ),
+              ),
+            ],
+          )
         ],
       ),
     );

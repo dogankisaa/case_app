@@ -38,6 +38,10 @@ dependencies:
   percent_indicator: ^4.0.0
   provider: ^6.0.2
   dio: ^4.0.6
+  intro_slider: ^3.0.4
+  auto_route: ^3.2.4
+  auto_route_generator: ^3.2.3
+  build_runner: ^2.1.10
 
 dev_dependencies:
   flutter_test:
@@ -74,6 +78,8 @@ flutter:
     - assets/navigator_live_icon.svg
     - assets/navigator_profile_icon.svg
     - assets/post_download_icon.svg
+    - assets/first_slide_icon.svg
+    
     
   #   - images/a_dot_ham.jpeg
 

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_case/screens/entry_screen.dart';
+import 'package:flutter_case/screens/login_screen.dart';
 import 'package:flutter_case/screens/player_screen.dart';
 
 void main() {
@@ -31,7 +33,9 @@ class _MyAppState extends State<MyApp> {
           backgroundColor: Color.fromRGBO(4, 4, 4, 1),
           
           hintColor: Colors.white),
-      home: const PlayerScreen(),
+      home: const EntryScreen(),
+       routes: <String, WidgetBuilder>{
+         "/login" : (BuildContext context) => LoginScreen() }
     );
   }
 }
