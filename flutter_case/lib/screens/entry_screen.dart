@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_case/router/app_router.gr.dart';
 import 'package:flutter_case/screenInputs/entry_screen_inputs.dart';
 import 'package:flutter_case/screens/login_screen.dart';
 import 'package:flutter_case/widgets/svg_widget.dart';
@@ -8,6 +9,8 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:auto_route/auto_route.dart';
 import '../screenInputs/play_screen_inputs.dart';
 import '../widgets/text_widget.dart';
+import 'package:flutter_case/screens/login_screen.dart';
+import "package:flutter_case/router/app_router.gr.dart";
 
 class EntryScreen extends StatefulWidget {
   const EntryScreen({Key? key}) : super(key: key);
@@ -28,19 +31,18 @@ class _EntryScreenState extends State<EntryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: IntroSlider(
-          colorActiveDot: activeDotColor,
-          colorDot: inactiveDotColor,
-          slides: slides,
-          hideStatusBar: true,
-          showSkipBtn: false,
-          showPrevBtn: false,
-         
-          renderDoneBtn: renderDoneButton(),
-          renderNextBtn: renderNextButton(),
-          doneButtonStyle: nextButton(),
-          nextButtonStyle: nextButton(),
-        ),
-          
+        colorActiveDot: activeDotColor,
+        colorDot: inactiveDotColor,
+        slides: slides,
+        hideStatusBar: true,
+        showSkipBtn: false,
+        showPrevBtn: false,
+        onNextPress: routeToLogin,
+        renderDoneBtn: renderDoneButton(),
+        renderNextBtn: renderNextButton(),
+        doneButtonStyle: nextButton(),
+        nextButtonStyle: nextButton(),
+      ),
     );
   }
 
@@ -156,7 +158,9 @@ class _EntryScreenState extends State<EntryScreen> {
         primary: Theme.of(context).primaryColor);
   }
 
- 
+  routeToLogin() {
+    context.router.pushNamed("/login");
+    }
 }
 
 renderDoneButton() {

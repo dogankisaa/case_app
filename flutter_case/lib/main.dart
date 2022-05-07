@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_case/router/app_router.gr.dart';
 import 'package:flutter_case/screens/entry_screen.dart';
 import 'package:flutter_case/screens/login_screen.dart';
 import 'package:flutter_case/screens/player_screen.dart';
@@ -16,26 +17,23 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    final _appRouter = AppRouter();
+    return MaterialApp.router(
+      routeInformationParser: _appRouter.defaultRouteParser(),
+      routerDelegate: _appRouter.delegate(),
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
               backgroundColor: Colors.transparent,
               iconTheme: IconThemeData(color: Colors.white)),
-          primaryColor: Color.fromRGBO(20, 220, 148, 1),
-          primaryColorDark: Color.fromRGBO(20, 220, 148, 0.2),
-          backgroundColor: Color.fromRGBO(4, 4, 4, 1),
-          
+          primaryColor: const Color.fromRGBO(20, 220, 148, 1),
+          primaryColorDark: const Color.fromRGBO(20, 220, 148, 0.2),
+          backgroundColor: const Color.fromRGBO(4, 4, 4, 1),
           hintColor: Colors.white),
-      home: const EntryScreen(),
-       routes: <String, WidgetBuilder>{
-         "/login" : (BuildContext context) => LoginScreen() }
     );
   }
 }
