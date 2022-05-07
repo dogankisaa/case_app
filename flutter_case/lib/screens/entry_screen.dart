@@ -159,7 +159,7 @@ class _EntryScreenState extends State<EntryScreen> {
   }
 
   routeToLogin() {
-    context.router.pushNamed("/login");
+    context.router.pushNamed("/navigation");
     }
 }
 

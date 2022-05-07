@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_case/screenInputs/play_screen_inputs.dart';
-import 'package:flutter_case/service/dio_get_player_data.dart';
-import 'package:flutter_case/widgets/svg_widget.dart';
-
+import 'package:flutter_case/widgets/text_widget.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
-import '../widgets/bottom_navigation_widget.dart';
+import '../screenInputs/play_screen_inputs.dart';
+import '../service/dio_get_player_data.dart';
 import '../widgets/post_widget.dart';
-import '../widgets/text_widget.dart';
+import '../widgets/svg_widget.dart';
 
 class PlayerScreen extends StatefulWidget {
-  const PlayerScreen({Key? key}) : super(key: key);
+  const PlayerScreen({ Key? key }) : super(key: key);
 
   @override
   State<PlayerScreen> createState() => _PlayerScreenState();
@@ -21,8 +19,8 @@ class _PlayerScreenState extends State<PlayerScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: BottomNavigationWidget(),
-      appBar: AppBar(
+      backgroundColor: Theme.of(context).backgroundColor,
+      appBar:  AppBar(
         leading: Padding(
           padding: const EdgeInsets.only(left: 30),
           child: SvgWidget(
@@ -40,7 +38,6 @@ class _PlayerScreenState extends State<PlayerScreen> {
           ),
         ],
       ),
-      backgroundColor: Theme.of(context).backgroundColor,
       body: FutureBuilder(
         future: getData(),
         builder: (BuildContext context, AsyncSnapshot snapshot) {
@@ -73,7 +70,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                                     )),
                               ),
                             ),
-
+    
                             SizedBox(
                               height: 8,
                             ),
@@ -148,7 +145,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                     SizedBox(
                       height: 16,
                     ),
-
+    
                     //play button
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

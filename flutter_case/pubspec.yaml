@@ -81,6 +81,8 @@ flutter:
     - assets/navigator_profile_icon.svg
     - assets/post_download_icon.svg
     - assets/first_slide_icon.svg
+    - assets/home_screen_notification_icon.svg
+    - assets/home_screen_right_icon.svg
     
     
   #   - images/a_dot_ham.jpeg

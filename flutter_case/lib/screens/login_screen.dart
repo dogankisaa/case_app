@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_case/screenInputs/entry_screen_inputs.dart';
 import 'package:flutter_case/screenInputs/login_inputs.dart';
@@ -148,7 +149,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   login() {
     if (_key.currentState!.validate()) {
-      print("object");
-    }
+context.router.replaceNamed("/home");    }
   }
 }
