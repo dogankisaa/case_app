@@ -78,6 +78,7 @@ class _PlayerScreenState extends State<PlayerScreen> {
                               backgroundColor:
                                   Theme.of(context).primaryColorDark,
                               percent: linearProgressPercent,
+                              padding: EdgeInsets.zero,
                               barRadius:
                                   Radius.circular(linearProgressbarRadius),
                               width: linearProgressWith,

@@ -16,8 +16,18 @@ class TextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-        text,
-        style:
-            TextStyle(color: color, fontSize: size as double, fontWeight: bold),
-      );  }
+      
+      text,
+      maxLines: 2,
+      softWrap: false,
+      style: TextStyle(
+          color: color,
+          fontSize: size as double,
+          fontWeight: bold,
+          
+          overflow: TextOverflow.ellipsis,
+        
+          ),
+    );
+  }
 }

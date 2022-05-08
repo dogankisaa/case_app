@@ -13,5 +13,18 @@ double homeScreenPadding = 24;
 double homeScreenMainImageRadius = 16;
 
 String homeScreenContinueListening = "Continue listening";
+String homeScreenTopics = "Topics";
+String homeScreenNewRelease = "New Release";
+
 String homeScreenContinueListeningRightIconText = "assets/home_screen_right_icon.svg";
+
+double homeScreenContinueListeningRowContainerSize = 104; 
+double homeScreenContinueListeningRowContainerRadius = 16; 
+String homeScreenContinueListeningRowContainerText = "3 Things you shold knasdadsasdasdas addow addow addow";
+
+double homeScreenTopicsRowContainerHeight = 88;
+double homeScreenTopicsRowContainerWidth = 152;
+
+double homeScreenNewReleaseRowContainerHeight = 211;
+double homeScreenNewReleaseRowContainerWidth = 136;
 
