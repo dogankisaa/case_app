@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_case/screenInputs/play_screen_inputs.dart';
 import 'package:flutter_case/screens/home_screen.dart';
 import 'package:flutter_case/screens/player_screen.dart';
-import 'package:flutter_case/service/dio_get_player_data.dart';
+
 import 'package:flutter_case/widgets/svg_widget.dart';
 
-import 'package:percent_indicator/circular_percent_indicator.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
 
-import '../widgets/bottom_navigation_widget.dart';
-import '../widgets/post_widget.dart';
-import '../widgets/text_widget.dart';
 
 class NavigationScreen extends StatefulWidget {
   const NavigationScreen({Key? key}) : super(key: key);

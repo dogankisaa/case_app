@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_case/router/app_router.gr.dart';
+
 import 'package:flutter_case/screenInputs/entry_screen_inputs.dart';
-import 'package:flutter_case/screens/login_screen.dart';
+
 import 'package:flutter_case/widgets/svg_widget.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
@@ -9,8 +9,7 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:auto_route/auto_route.dart';
 import '../screenInputs/play_screen_inputs.dart';
 import '../widgets/text_widget.dart';
-import 'package:flutter_case/screens/login_screen.dart';
-import "package:flutter_case/router/app_router.gr.dart";
+
 
 class EntryScreen extends StatefulWidget {
   const EntryScreen({Key? key}) : super(key: key);
@@ -37,7 +36,7 @@ class _EntryScreenState extends State<EntryScreen> {
         hideStatusBar: true,
         showSkipBtn: false,
         showPrevBtn: false,
-        onNextPress: routeToLogin,
+        onDonePress: routeToLogin,
         renderDoneBtn: renderDoneButton(),
         renderNextBtn: renderNextButton(),
         doneButtonStyle: nextButton(),
@@ -51,7 +50,7 @@ class _EntryScreenState extends State<EntryScreen> {
       Slide(
           backgroundColor: entryScreenBackGroundColor,
           maxLineTitle: 2,
-          styleTitle: TextStyle(),
+          styleTitle: const TextStyle(),
           title: firstSlideHeadTitle,
           widgetTitle: Padding(
             padding: const EdgeInsets.only(top: 50),
@@ -65,7 +64,7 @@ class _EntryScreenState extends State<EntryScreen> {
                     color: Colors.white,
                     bold: textWeightLarge,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   TextWidget(
@@ -108,7 +107,7 @@ class _EntryScreenState extends State<EntryScreen> {
                                   entryScreenBackGroundColor,
                                   firstSlideCenterBottomColor
                                 ],
-                                stops: [
+                                stops: const [
                                   0,
                                   1
                                 ],
@@ -159,7 +158,7 @@ class _EntryScreenState extends State<EntryScreen> {
   }
 
   routeToLogin() {
-    context.router.pushNamed("/navigation");
+    context.router.pushNamed("/login");
     }
 }
 

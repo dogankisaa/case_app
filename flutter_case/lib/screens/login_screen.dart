@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_case/screenInputs/entry_screen_inputs.dart';
+
 import 'package:flutter_case/screenInputs/login_inputs.dart';
 import 'package:flutter_case/screenInputs/play_screen_inputs.dart';
 import 'package:flutter_case/widgets/text_widget.dart';
@@ -15,8 +15,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  @override
   final _key = GlobalKey<FormState>();
+  @override
+  
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
@@ -149,6 +150,6 @@ class _LoginScreenState extends State<LoginScreen> {
 
   login() {
     if (_key.currentState!.validate()) {
-context.router.replaceNamed("/home");    }
+context.router.replaceNamed("/navigation");    }
   }
 }

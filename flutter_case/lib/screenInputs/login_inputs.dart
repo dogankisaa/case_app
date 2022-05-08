@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-Color loginAppBarBackGroundColor = Color.fromRGBO(4, 4, 4, 1);
+Color loginAppBarBackGroundColor = const Color.fromRGBO(4, 4, 4, 1);
 
 double loginScreenPadding = 24;
 
-Color loginTextFormFieldBackGroundColor = Color.fromRGBO(255, 255, 255, 0.1);
+Color loginTextFormFieldBackGroundColor = const Color.fromRGBO(255, 255, 255, 0.1);
 double loginTextFormFieldRadius = 16;
 
 String loginEmailFieldText = "Your Email";

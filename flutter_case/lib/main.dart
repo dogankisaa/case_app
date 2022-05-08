@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+
 import 'package:flutter_case/router/app_router.gr.dart';
-import 'package:flutter_case/screens/entry_screen.dart';
-import 'package:flutter_case/screens/login_screen.dart';
-import 'package:flutter_case/screens/player_screen.dart';
+
 
 void main() {
   runApp(const MyApp());

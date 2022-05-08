@@ -5,10 +5,10 @@ import 'package:flutter_case/service/dio_get_player_data.dart';
 import 'package:flutter_case/widgets/home_screen_scrollable_row_widget.dart';
 import 'package:flutter_case/widgets/svg_widget.dart';
 import 'package:flutter_case/widgets/text_widget.dart';
-import 'package:percent_indicator/linear_percent_indicator.dart';
+
 
 import '../widgets/home_screen_row_header.dart';
-import '../widgets/post_widget.dart';
+
 import '../widgets/text_field_widget.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
       future: getData(),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
-          print(snapshot.data.image);
+         
           return DefaultTabController(
             length: 4,
             child: Scaffold(
@@ -121,67 +121,70 @@ class TabBarForYouTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: Container(
-        child: Column(
-          children: [
-            SizedBox(
-              height: 20,
-            ),
-            Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(homeScreenMainImageRadius),
-                  color: Colors.grey,
-                ),
-                height: 130,
-                width: double.infinity,
-                child: Image.network(image)),
-            SizedBox(
-              height: 10,
-            ),
-            HomeScreenRowHeaderWidget(text: homeScreenContinueListening,),
-            SizedBox(
-              height: 10,
-            ),
-            HomeScreenHorizontalScrollWidget(
-              isProgress: true,
-                image: image,
-                dataCount: 2,
-                imageHeight: homeScreenContinueListeningRowContainerSize,
-                imageWidth: homeScreenContinueListeningRowContainerSize,
-                progressPercent: 0.2,
-                rowHeight: 160.0),
-                SizedBox(
-                  height: 10,
-                ),
-                HomeScreenRowHeaderWidget(text: homeScreenTopics,),
-                SizedBox(
-                  height: 10,
-                ),
-                 HomeScreenHorizontalScrollWidget(
-                   isProgress: false,
-                image: image,
-                dataCount: 5,
-                imageHeight: homeScreenTopicsRowContainerHeight,
-                imageWidth: homeScreenTopicsRowContainerWidth,
-                progressPercent: 0.6,
-                rowHeight: 100.0),
-                 SizedBox(
-                  height: 10,
-                ),
-                HomeScreenRowHeaderWidget(text: homeScreenNewRelease,),
-                SizedBox(
-                  height: 10,
-                ),
-                 HomeScreenHorizontalScrollWidget(
-                   isProgress: false,
-                image: image,
-                dataCount: 5,
-                imageHeight: homeScreenNewReleaseRowContainerHeight,
-                imageWidth: homeScreenNewReleaseRowContainerWidth,
-                progressPercent: 0.6,
-                rowHeight: 240.0),
-          ],
-        ),
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 20,
+          ),
+          Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(homeScreenMainImageRadius),
+                color: Colors.grey,
+                image: DecorationImage(
+                  image: NetworkImage(image),
+                  fit: BoxFit.cover
+                )
+              ),
+              height: 130,
+              width: double.infinity,
+             ),
+          const SizedBox(
+            height: 10,
+          ),
+          HomeScreenRowHeaderWidget(text: homeScreenContinueListening,),
+          const SizedBox(
+            height: 10,
+          ),
+          HomeScreenHorizontalScrollWidget(
+            rowType: "continue",
+            isProgress: true,
+              image: image,
+              dataCount: 2,
+              imageHeight: homeScreenContinueListeningRowContainerSize,
+              imageWidth: homeScreenContinueListeningRowContainerSize,
+              progressPercent: 0.2,
+              rowHeight: 160.0),
+              const SizedBox(
+                height: 10,
+              ),
+              HomeScreenRowHeaderWidget(text: homeScreenTopics,),
+              const SizedBox(
+                height: 10,
+              ),
+               HomeScreenHorizontalScrollWidget(
+                 isProgress: false,
+              image: image,
+              dataCount: 5,
+              imageHeight: homeScreenTopicsRowContainerHeight,
+              imageWidth: homeScreenTopicsRowContainerWidth,
+              progressPercent: 0.6,
+              rowHeight: 100.0),
+               const SizedBox(
+                height: 10,
+              ),
+              HomeScreenRowHeaderWidget(text: homeScreenNewRelease,),
+              const SizedBox(
+                height: 10,
+              ),
+               HomeScreenHorizontalScrollWidget(
+                 isProgress: false,
+              image: image,
+              dataCount: 5,
+              imageHeight: homeScreenNewReleaseRowContainerHeight,
+              imageWidth: homeScreenNewReleaseRowContainerWidth,
+              progressPercent: 0.6,
+              rowHeight: 240.0),
+        ],
       ),
     );
   }

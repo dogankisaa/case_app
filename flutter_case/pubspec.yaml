@@ -83,6 +83,14 @@ flutter:
     - assets/first_slide_icon.svg
     - assets/home_screen_notification_icon.svg
     - assets/home_screen_right_icon.svg
+    - assets/media_player_screen_down_arrow_icon.svg
+    - assets/media_player_screen_play_button.png
+    - assets/media_player_screen_play_icon.svg
+    - assets/media_player_screen_forward_button.svg
+    - assets/media_player_screen_jump_icon.svg
+    - assets/media_player_screen_headphone_icon.svg
+    - assets/media_player_screen_bottom_right_icon.svg
+    - assets/media_player_screen_player_progress.png
     
     
   #   - images/a_dot_ham.jpeg

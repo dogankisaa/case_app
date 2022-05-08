@@ -22,7 +22,7 @@ class PostWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Container(
+          SizedBox(
               height: 80,
               width: 80,
               child: Center(
@@ -32,7 +32,7 @@ class PostWidget extends StatelessWidget {
                         image,
                         fit: BoxFit.cover,
                       )))),
-          SizedBox(
+          const SizedBox(
             width: 10,
           ),
           Expanded(
@@ -45,7 +45,7 @@ class PostWidget extends StatelessWidget {
                   color: Theme.of(context).hintColor,
                   size: textSizeMedium,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 5,
                 ),
                 TextWidget(

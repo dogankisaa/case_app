@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_case/screenInputs/play_screen_inputs.dart';
-import 'package:flutter_case/screens/home_screen.dart';
+
 import 'package:flutter_case/widgets/svg_widget.dart';
 
 class BottomNavigationWidget extends StatefulWidget {

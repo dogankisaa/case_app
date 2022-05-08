@@ -1,6 +1,5 @@
-import 'dart:ffi';
 
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 
 String backIconText = "assets/back_icon.svg";
@@ -37,7 +36,7 @@ FontWeight textWeightSmall = FontWeight.w300;
 FontWeight textWeightMedium = FontWeight.w600;
 FontWeight textWeightLarge = FontWeight.w900;
 
-Color detailTextColor = Color.fromRGBO(165, 165, 165, 1);
+Color detailTextColor = const Color.fromRGBO(165, 165, 165, 1);
 
 String playButtonText = "Play";
 double playButtonWidth = 204;
@@ -56,7 +55,7 @@ String downArrowIconText = "assets/down_arrow_icon.svg";
 double downArrowIconWidth = 24;
 double downArrowIconHeight = 24;
 
-Color bottomNavigationColor = Color.fromRGBO(27, 26, 31, 1);
+Color bottomNavigationColor = const Color.fromRGBO(27, 26, 31, 1);
 
 String bottomNavigationHomeIconText = "assets/navigator_home_icon.svg";
 String bottomNavigationSearchIconText = "assets/navigator_search_icon.svg";
